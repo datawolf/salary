@@ -7,7 +7,7 @@
 	  	LODOP.PREVIEW();
 	};*/
 	function PrintSalary() {	
-		LODOP=getLodop();  
+		LODOP=getLodop(document.getElementById('LODOP_OB'),document.getElementById('LODOP_EM'));
 		LODOP.PRINT_INITA(0,0,"80mm","12cm","打印控件功能演示");
 		LODOP.SET_PRINT_PAGESIZE(3, 800, "10mm", "");
 		AddPrintContent();
@@ -43,7 +43,7 @@
 		LODOP.ADD_PRINT_TEXT(60,30,200,25,"工号：" + pr_map.pr_employer_id);
 		LODOP.ADD_PRINT_TEXT(60,150,200,25,"部门：" + pr_map.pr_department);
 		LODOP.ADD_PRINT_TEXT(75,30,200,25,"姓名：" + pr_map.pr_username);
-		LODOP.ADD_PRINT_TEXT(75,150,200,25,"职位：" + pr_map.pr_position);
+	//	LODOP.ADD_PRINT_TEXT(75,150,200,25,"职位：" + pr_map.pr_position);
 		LODOP.ADD_PRINT_TEXT(90,30,200,25,"--实发工资：" + pr_map.pr_total_pay);
 		LODOP.ADD_PRINT_TEXT(90,150,200,25,"（总收入-总扣款）");
 		LODOP.ADD_PRINT_TEXT(105,30,200,25,"--总收入：" + pr_map.pr_total_salary);
