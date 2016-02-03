@@ -58,7 +58,7 @@ Yii::app()->clientScript->registerScript('password', "
 		$.ajax({
 			type: 'get',
 			async: false,
-			url: 'http://192.168.199.210:8080/id',
+			url: 'http://localhost:8080/id',
 			dataType: 'jsonp',
 			jsonp: 'callback',
 			jsonpCallback:'callbackid',
